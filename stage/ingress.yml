@@ -4,6 +4,8 @@ metadata:
   name: vueca
   labels:
     app.kubernetes.io/part-of: vueca
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   tls:
     - hosts: [ vueca-storybook.stage.vivaconagua.org ]
