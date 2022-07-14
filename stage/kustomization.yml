@@ -9,6 +9,6 @@ resources:
 - ingress.yml
 
 images:
-- digest: sha256:3434be669377404492f4c3eb4f0320e898eaa278e11fb9d397c117b62db7916a
+- digest: sha256:47e81570bb059aa5476a67af91ec3b6c404b58e5393bd99e456e6bd8d5b7717a
   name: ghcr.io/viva-con-agua/vueca-storybook
 kind: Kustomization
