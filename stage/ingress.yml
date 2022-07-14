@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vueca
+  labels:
+    app.kubernetes.io/part-of: vueca
+spec:
+  tls:
+    - hosts: [ vueca-storybook.stage.vivaconagua.org ]
+      secretName: vueca-storybook.stage.vivaconagua.org-tls
+  rules:
+    - host: vueca-storybook.stage.vivaconagua.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: vueca-storybook-stage
+                port:
+                  name: http

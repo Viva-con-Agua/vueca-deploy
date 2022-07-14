@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+nameSuffix: -stage
+
+resources:
+  - https://github.com/Viva-con-Agua/vueca.git?ref=feature/ci_cd
+  - ingress.yml
+
+images:
+  - name: ghcr.io/viva-con-agua/vueca-storybook
+    newTag: stage-latest
