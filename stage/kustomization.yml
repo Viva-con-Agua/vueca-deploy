@@ -5,9 +5,10 @@ commonLabels:
 nameSuffix: -stage
 
 resources:
-  - https://github.com/Viva-con-Agua/vueca.git?ref=feature/ci_cd
-  - ingress.yml
+- https://github.com/Viva-con-Agua/vueca.git?ref=feature/ci_cd
+- ingress.yml
 
 images:
-  - name: ghcr.io/viva-con-agua/vueca-storybook
-    newTag: stage-latest
+- digest: sha256:80c4d7f6d94cb46a59f385593c9e0b52f8dd0e52135df4076fa099f8a58f108b
+  name: ghcr.io/viva-con-agua/vueca-storybook
+kind: Kustomization
