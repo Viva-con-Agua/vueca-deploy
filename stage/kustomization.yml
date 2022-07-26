@@ -6,7 +6,7 @@ commonLabels:
 nameSuffix: -stage
 
 resources:
-- https://github.com/Viva-con-Agua/vueca.git?ref=feature/ci_cd
+- https://github.com/Viva-con-Agua/vueca.git?ref=stage
 - ingress.yml
 
 images:
