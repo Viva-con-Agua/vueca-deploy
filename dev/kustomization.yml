@@ -2,11 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: vueca
 commonLabels:
-  app.kubernetes.io/instance: stage
-nameSuffix: -stage
+  app.kubernetes.io/instance: dev
+nameSuffix: -dev
 
 resources:
-- https://github.com/Viva-con-Agua/vueca.git?ref=feature/ci_cd
+- https://github.com/Viva-con-Agua/vueca.git?ref=develop
 - ingress.yml
 
 images:

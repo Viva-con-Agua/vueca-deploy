@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vueca
+  labels:
+    app.kubernetes.io/part-of: vueca
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+    - hosts: [ vueca-storybook.dev.vivaconagua.org ]
+      secretName: vueca-storybook.dev.vivaconagua.org-tls
+  rules:
+    - host: vueca-storybook.dev.vivaconagua.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: vueca-storybook-dev
+                port:
+                  name: http
