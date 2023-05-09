@@ -11,5 +11,5 @@ resources:
 - namespace.yml
 
 images:
-- digest: sha256:5ece266b6ea925d73ffd5a2ca97a57d016c230a273844bb0e0d30e916b850ee3
+- digest: sha256:047cc2609b6dd26507a9b438f5520e797b4bd14c86f0c270e1fe667f8b9b2ea2
   name: ghcr.io/viva-con-agua/vueca-storybook
